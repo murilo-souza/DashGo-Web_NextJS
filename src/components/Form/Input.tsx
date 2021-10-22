@@ -16,6 +16,7 @@ export function Input({ name, label, ...rest }: InputProps) {
         bgColor="gray.900"
         variant="filled"
         width={328}
+        color="white"
 
 
         _hover={{
