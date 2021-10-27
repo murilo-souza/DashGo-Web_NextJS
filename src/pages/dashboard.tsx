@@ -58,6 +58,8 @@ const options = {
 const series = [
     {
         name: 'series1', data: [31, 45, 100, 50, 200, 12, 40, 30, 55]
+
+        
     }
 ]
 
