@@ -15,14 +15,14 @@ export function Input({ name, label, ...rest }: InputProps) {
         focusBorderColor="pink.500"
         bgColor="gray.900"
         variant="filled"
-        width={328}
+        width={[300 ,328]}
         color="white"
 
 
         _hover={{
           bgColor: 'gray.900',
         }}
-        size="lg"
+        size={"lg"}
         {...rest}
       />
     </FormControl>
