@@ -3,18 +3,23 @@ import {ChakraProvider} from '@chakra-ui/react'
 import { theme } from '../styles/theme'
 import { SidebarDrawerProvider } from '../contexts/SidebarDrawerContext'
 import { makeServer } from '../services/mirage'
+import {QueryClient, QueryClientProvider} from 'react-query'
 
-if (process.env.NODE_ENV !== 'development') {
+if (process.env.NODE_ENV === 'development') {
   makeServer()
 }
 
+const queryCient = new QueryClient()
+
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ChakraProvider resetCSS={false} theme={theme}>
-      <SidebarDrawerProvider>
-        <Component {...pageProps} />
-      </SidebarDrawerProvider>
-    </ChakraProvider>
+    <QueryClientProvider client={queryCient}>
+      <ChakraProvider resetCSS={false} theme={theme}>
+        <SidebarDrawerProvider>
+          <Component {...pageProps} />
+        </SidebarDrawerProvider>
+      </ChakraProvider>
+    </QueryClientProvider>
     )
 }
 
