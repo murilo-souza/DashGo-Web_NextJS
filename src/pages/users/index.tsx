@@ -4,12 +4,13 @@ import { Header } from '../../components/Header';
 import { Pagination } from '../../components/Pagination';
 import { Sidebar } from '../../components/Sidebar';
 import NextLink from 'next/link'
-import { useUsers } from '../../services/hooks/useUsers';
+import { getUsers, useUsers } from '../../services/hooks/useUsers';
 import { useState } from 'react';
 import { queryCient } from '../../services/queryClient';
 import { api } from '../../services/api';
+import { GetServerSideProps } from 'next';
 
-export default function UserList(){
+export default function UserList({users}){
     
     const [page, setPage] = useState(1)
     const {data, isLoading, error, isFetching} = useUsers(page)
@@ -19,7 +20,7 @@ export default function UserList(){
         lg: true,
     })
 
-    async function handlePrefetchUser(userId: number){
+    async function handlePrefetchUser(userId: string){
         await queryCient.prefetchQuery(['user', userId], async ()=>{
             const response = await api.get(`users/${userId}`)
 
