@@ -9,4 +9,3 @@
   <li><a href="https://pt-br.reactjs.org/">React JS</a></li>
   <li><a href="https://chakra-ui.com/">Chakra UI</a></li>
 </ul>
-<p>:construction: Em desenvolvimento :construction:</p>
