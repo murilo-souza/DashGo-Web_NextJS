@@ -4,8 +4,8 @@
 </div>
 <h2>Tecnologia</h2>
 <ul>
-  <li><a href="https://www.typescriptlang.org/">TypeScript</a></li>
   <li><a href="https://nextjs.org/">Next JS</a></li>
   <li><a href="https://pt-br.reactjs.org/">React JS</a></li>
   <li><a href="https://chakra-ui.com/">Chakra UI</a></li>
+  <li><a href="https://www.typescriptlang.org/">TypeScript</a></li>
 </ul>
